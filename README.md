@@ -1,2 +1,2 @@
 # Products-API
-Very basic products-api for testing
+Very basic products api for testing
