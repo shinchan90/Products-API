@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\wamp64\\www\\Projects\\Products-API\\ProductsAPI\\ProductsAPI\\ProductsAPI.csproj": {}
+    "C:\\wamp64\\www\\Projects\\Products-API\\ProductsAPI\\ProductsAPI\\ProductsAPI - Backup.csproj": {}
   },
   "projects": {
-    "C:\\wamp64\\www\\Projects\\Products-API\\ProductsAPI\\ProductsAPI\\ProductsAPI.csproj": {
+    "C:\\wamp64\\www\\Projects\\Products-API\\ProductsAPI\\ProductsAPI\\ProductsAPI - Backup.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\wamp64\\www\\Projects\\Products-API\\ProductsAPI\\ProductsAPI\\ProductsAPI.csproj",
-        "projectName": "ProductsAPI",
-        "projectPath": "C:\\wamp64\\www\\Projects\\Products-API\\ProductsAPI\\ProductsAPI\\ProductsAPI.csproj",
+        "projectUniqueName": "C:\\wamp64\\www\\Projects\\Products-API\\ProductsAPI\\ProductsAPI\\ProductsAPI - Backup.csproj",
+        "projectName": "ProductsAPI - Backup",
+        "projectPath": "C:\\wamp64\\www\\Projects\\Products-API\\ProductsAPI\\ProductsAPI\\ProductsAPI - Backup.csproj",
         "packagesPath": "C:\\Users\\emakr\\.nuget\\packages\\",
         "outputPath": "C:\\wamp64\\www\\Projects\\Products-API\\ProductsAPI\\ProductsAPI\\obj\\",
         "projectStyle": "PackageReference",
@@ -49,15 +49,9 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[6.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.InMemory": {
-              "target": "Package",
-              "version": "[7.0.5, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.5, )"
             },

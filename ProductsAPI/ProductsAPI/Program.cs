@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using ProductsAPI.Data;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,8 +14,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
-builder.Services.AddDbContext<ProductsContext>(opt =>
-    opt.UseInMemoryDatabase("Products"));
+
+
+var configuration = new ConfigurationBuilder()
+    .SetBasePath(builder.Environment.ContentRootPath)
+    .AddJsonFile("appsettings.json", optional: false)
+    .Build();
+
+builder.Services.AddDbContext<ProductsContext>(options =>
+{
+    options.UseMySQL(configuration.GetConnectionString("DefaultConnection"));
+});
 
 var app = builder.Build();
 
