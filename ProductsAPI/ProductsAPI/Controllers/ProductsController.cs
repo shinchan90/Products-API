@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ProductsAPI.Data;
+using ProductsAPI.Models;
+using System.Diagnostics;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -14,6 +17,11 @@ namespace ProductsAPI.Controllers
         {
             return new string[] { "value1", "value2" };
         }
+        private readonly ProductsContext _PContext;
+        public ProductsController(ProductsContext PContext)
+        {
+            _PContext = PContext;
+        }
 
         // GET api/Products/
         [HttpGet("{id}")]
@@ -24,8 +32,19 @@ namespace ProductsAPI.Controllers
 
         // POST api/Products
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post([FromBody] Product product)
         {
+            try
+            {
+                _PContext.Products.Add(product);
+                _PContext.SaveChanges();
+                return Ok("Product Created Successfully");
+            }
+
+            catch(Exception ex)
+            {
+                return StatusCode(500, $"An error occured: {ex.Message}");
+            }
         }
 
         // PUT api/Products/

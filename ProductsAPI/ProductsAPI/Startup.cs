@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.OpenApi.Models;
 using ProductsAPI.Data;
 
 namespace ProductsAPI
@@ -24,6 +25,13 @@ namespace ProductsAPI
             {
                 options.UseMySQL(Configuration.GetConnectionString("DefaultConnection"));
             });
+            services.AddControllers();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
+            });
         }
+
+        
     }
 }
