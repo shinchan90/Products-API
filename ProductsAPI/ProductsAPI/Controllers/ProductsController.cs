@@ -11,24 +11,30 @@ namespace ProductsAPI.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        // GET: api/Products
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
         private readonly ProductsContext _PContext;
+        
+        
         public ProductsController(ProductsContext PContext)
         {
             _PContext = PContext;
         }
 
-        // GET api/Products/
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet]
+        // GET: api/Products
+        public IActionResult Get()
         {
-            return "value";
+            try
+            {
+                var Products = _PContext.Products.ToList();
+                return Ok(Products);
+            }
+            
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
+
 
         // POST api/Products
         [HttpPost]
@@ -49,14 +55,36 @@ namespace ProductsAPI.Controllers
 
         // PUT api/Products/
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public IActionResult Update([FromRoute] int id, UpdateProduct update) 
         {
+            var product = _PContext.Products.Find(id);
+            if(product != null)
+            {
+                product.Name= update.Name;
+                product.Description= update.Description;
+                product.Price= update.Price;
+                product.Quantity= update.Quantity;
+                product.Availability= update.Availability;
+                _PContext.SaveChanges();
+                return Ok("Product Successfully Updated");
+            }
+
+            return NotFound();
         }
 
         // DELETE api/Products/
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete([FromRoute] int id)
         {
+            var product = _PContext.Products.Find(id);
+            if(product!= null)
+            {
+                _PContext.Products.Remove(product);
+                _PContext.SaveChanges();
+                return Ok("Product Deleted Successfully");
+            }
+
+            return NotFound();
         }
     }
 }

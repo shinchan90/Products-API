@@ -225,3 +225,8 @@ C:\wamp64\www\Projects\Products-API\ProductsAPI\ProductsAPI\bin\Debug\net6.0\Mic
 C:\wamp64\www\Projects\Products-API\ProductsAPI\ProductsAPI\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
 C:\wamp64\www\Projects\Products-API\ProductsAPI\ProductsAPI\bin\Debug\net6.0\Mono.TextTemplating.dll
 C:\wamp64\www\Projects\Products-API\ProductsAPI\ProductsAPI\bin\Debug\net6.0\System.CodeDom.dll
+C:\wamp64\www\Products-API\ProductsAPI\ProductsAPI\bin\Debug\net6.0\Humanizer.dll
+C:\wamp64\www\Products-API\ProductsAPI\ProductsAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\wamp64\www\Products-API\ProductsAPI\ProductsAPI\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\wamp64\www\Products-API\ProductsAPI\ProductsAPI\bin\Debug\net6.0\Mono.TextTemplating.dll
+C:\wamp64\www\Products-API\ProductsAPI\ProductsAPI\bin\Debug\net6.0\System.CodeDom.dll
