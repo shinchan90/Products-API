@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7+2zEwjTsRmhuEWs3r5Mr9r1JDJqVBSZ6giUQUAEFNelagPHGCwxPS+rq/JotWuyIaccpxXK/Gfa15+Mt23yFQ==",
+  "dgSpecHash": "D5ajDsBlA892TwAZdL8bykknNSysRvOCslk1D4nSB+ldp2Ya5GdhmAKDDbzR69dIG1ml+WBorqoBP4MUX+QMTQ==",
   "success": true,
-  "projectFilePath": "C:\\wamp64\\www\\Products-API\\ProductsAPI\\ProductsAPI\\ProductsAPI.csproj",
+  "projectFilePath": "C:\\wamp64\\www\\Projects\\Products-API\\ProductsAPI\\ProductsAPI\\ProductsAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\emakr\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\emakr\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
